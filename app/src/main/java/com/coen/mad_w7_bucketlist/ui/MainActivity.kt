@@ -1,7 +1,8 @@
-package com.coen.mad_w7_bucketlist
+package com.coen.mad_w7_bucketlist.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.coen.mad_w7_bucketlist.R
 
 class MainActivity : AppCompatActivity() {
 

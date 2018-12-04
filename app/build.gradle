@@ -30,4 +30,20 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Extensions = ViewModel + LiveData
+    implementation "android.arch.lifecycle:extensions:$roomVersion"
+    kapt "android.arch.lifecycle:compiler:$roomVersion"
+    // Room
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+
+    // For async tasks
+    implementation "org.jetbrains.anko:anko-commons:0.10.4"
+
+    // Recycler view
+    implementation "com.android.support:recyclerview-v7:$android_support_version"
 }

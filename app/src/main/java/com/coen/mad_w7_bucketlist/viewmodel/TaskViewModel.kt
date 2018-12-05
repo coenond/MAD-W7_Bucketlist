@@ -1,22 +1,24 @@
 package com.coen.mad_w7_bucketlist.viewmodel
 
+import android.app.Application
+import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.ViewModel
-import android.content.Context
 import com.coen.mad_w7_bucketlist.db.TaskRepository
 import com.coen.mad_w7_bucketlist.model.Task
 
-class TaskViewModel(context: Context)  : ViewModel()  {
-
-    private var repo: TaskRepository = TaskRepository(context)
-
-    companion object {
-        lateinit var allTasks: LiveData<List<Task>>
-    }
+class TaskViewModel(application: Application) : AndroidViewModel(application) {
+    val taskList: LiveData<List<Task>>
+    private val taskRepository = TaskRepository(application.applicationContext)
 
     init {
-        allTasks = repo.getAll()
+        taskList = taskRepository.getAll()
     }
 
-    fun insert(g: Task) { repo.insert(g) }
+    fun removeTask(task: Task) {
+        taskRepository.delete(task)
+    }
+
+    fun updateTask(task: Task) {
+        taskRepository.update(task)
+    }
 }

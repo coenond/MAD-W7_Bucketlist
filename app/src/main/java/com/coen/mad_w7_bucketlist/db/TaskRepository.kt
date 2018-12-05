@@ -17,17 +17,16 @@ class TaskRepository(context: Context) {
         return taskDao.getAll()
     }
 
-    fun insert(g: Task) {
-        doAsync { taskDao.insert(g) }
+    fun insert(task: Task) {
+        doAsync { taskDao.insert(task) }
     }
 
-
-    fun delete(g: Task) {
-        doAsync { taskDao.delete(g) }
+    fun delete(task: Task) {
+        doAsync { taskDao.delete(task) }
     }
 
-    fun update(g: Task) {
-        doAsync { taskDao.update(g) }
+    fun update(task: Task) {
+        doAsync { taskDao.update(task) }
     }
 
     fun deleteAll() {

@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.AddTaskActivity"
+            android:label="Add Task"
+            android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coen.mad_w7_bucketlist.ui.AddTaskActivity" />
+        </activity>
     </application>
 
 </manifest>

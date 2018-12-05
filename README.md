@@ -1,4 +1,4 @@
-# MAD-W7_Bucketlit
+# MAD-W7_Bucketlist
 Level 7 of the Mobile Development Course
 
 
